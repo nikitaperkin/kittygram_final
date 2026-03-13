@@ -17,14 +17,14 @@ services:
     depends_on: 
       - db
     volumes:
-      - static:/static
-      - media:/media
+      - static:/backend_static
+      - media:/app/media
   frontend:
     env_file: .env
     image: ultraanten/kittygram_frontend
-    command: cp -r /app/build/. /static/
+    command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static:/static
+      - static:/frontend_static
   gateway:
     image: ultraanten/kittygram_gateway
     env_file: .env
@@ -34,5 +34,5 @@ services:
     ports:
       - 9000:80
     volumes:
-      - static:/static
+      - static:/staticfiles
       - media:/media
