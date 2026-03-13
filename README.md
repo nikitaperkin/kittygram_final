@@ -75,4 +75,4 @@ USE_SQLITE=False
 ```
 
 ## Автор
-[Ваше Имя](https://github.com/nikitaperkin)
+[Перкин Никита](https://github.com/nikitaperkin)
